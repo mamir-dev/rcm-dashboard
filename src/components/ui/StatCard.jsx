@@ -5,8 +5,12 @@ export default function StatCard({ label, value, change, positive, icon: Icon, c
 
   return (
     <div
-      className="card card-hover fade-in-up"
-      style={{ animationDelay: `${delay}s`, opacity: 0 }}
+      className="card glass-card fade-in-up"
+      style={{ 
+        animationDelay: `${delay}s`, 
+        opacity: 0,
+        transition: 'all 0.3s ease',
+      }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
         <div>

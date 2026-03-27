@@ -24,14 +24,14 @@ export default function Coding() {
           { label: 'Doc Incomplete', value: coderQueue.filter(c => c.docStatus === 'Incomplete').length, color: 'var(--warning)' },
           { label: 'Query Sent', value: coderQueue.filter(c => c.docStatus === 'Query Sent').length, color: 'var(--info)' },
         ].map((s, i) => (
-          <div key={i} className="card" style={{ padding: 16, textAlign: 'center' }}>
+          <div key={i} className="card glass-card" style={{ padding: 16, textAlign: 'center' }}>
             <div style={{ fontSize: 22, fontWeight: 700, color: s.color }}>{s.value}</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>{s.label}</div>
           </div>
         ))}
       </div>
 
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card glass-card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', display: 'flex', gap: 8, alignItems: 'center' }}>
           <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)' }}>Coder Worklist</span>
           <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>— sorted by priority & due date</span>

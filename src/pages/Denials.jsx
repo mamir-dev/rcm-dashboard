@@ -37,7 +37,7 @@ export default function Denials() {
           { label: 'Appeals Submitted', value: denials.filter(d => d.status.includes('Appeal')).length, color: 'var(--info)' },
           { label: 'Open / Unworked', value: denials.filter(d => d.status === 'Open').length, color: 'var(--danger)' },
         ].map((s, i) => (
-          <div key={i} className="card" style={{ padding: 16, textAlign: 'center', borderTop: `3px solid ${s.color}` }}>
+          <div key={i} className="card glass-card" style={{ padding: 16, textAlign: 'center', borderTop: `3px solid ${s.color}` }}>
             <div style={{ fontSize: 22, fontWeight: 700, color: s.color }}>{s.value}</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>{s.label}</div>
           </div>
@@ -45,7 +45,7 @@ export default function Denials() {
       </div>
 
       {/* Denial reasons chart */}
-      <div className="card" style={{ marginBottom: 16 }}>
+      <div className="card glass-card" style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>Denial Reasons by Volume</h2>
         <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 16 }}>Top denial categories this period</p>
         <ResponsiveContainer width="100%" height={160}>
@@ -77,7 +77,7 @@ export default function Denials() {
       </div>
 
       {/* Denials Table */}
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card glass-card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ overflowX: 'auto' }}>
           <table className="data-table">
             <thead>

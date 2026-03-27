@@ -18,7 +18,7 @@ export default function Reports() {
       {/* Row 1 */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         {/* Revenue Trend */}
-        <div className="card">
+        <div className="card glass-card">
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>Revenue Trend</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 16 }}>6-month billed vs collected</p>
           <ResponsiveContainer width="100%" height={180}>
@@ -47,7 +47,7 @@ export default function Reports() {
         </div>
 
         {/* Collection Rate Trend */}
-        <div className="card">
+        <div className="card glass-card">
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>Collection Rate</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 16 }}>Monthly % of billed collected</p>
           <ResponsiveContainer width="100%" height={180}>
@@ -74,7 +74,7 @@ export default function Reports() {
       {/* Row 2 */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         {/* Payer Mix */}
-        <div className="card">
+        <div className="card glass-card">
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>Payer Mix</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 12 }}>Revenue distribution by payer</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -101,7 +101,7 @@ export default function Reports() {
         </div>
 
         {/* AR Aging */}
-        <div className="card">
+        <div className="card glass-card">
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>AR Aging Report</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 16 }}>Outstanding balances by age bucket</p>
           <ResponsiveContainer width="100%" height={160}>

@@ -32,7 +32,7 @@ export default function Patients() {
           { label: 'Pending', value: patients.filter(p => p.status === 'Pending').length, color: 'var(--warning)' },
           { label: 'Inactive', value: patients.filter(p => p.status === 'Inactive').length, color: 'var(--text-muted)' },
         ].map((s, i) => (
-          <div key={i} className="card" style={{ textAlign: 'center', padding: 16 }}>
+          <div key={i} className="card glass-card" style={{ textAlign: 'center', padding: 16 }}>
             <div style={{ fontSize: 24, fontWeight: 700, color: s.color }}>{s.value}</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>{s.label}</div>
           </div>
@@ -69,7 +69,7 @@ export default function Patients() {
       </div>
 
       {/* Table */}
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card glass-card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ overflowX: 'auto' }}>
           <table className="data-table">
             <thead>

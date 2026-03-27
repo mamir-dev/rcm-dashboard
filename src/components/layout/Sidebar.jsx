@@ -23,11 +23,10 @@ const navItems = [
 export default function Sidebar({ collapsed, setCollapsed }) {
   return (
     <aside
+      className="glass-sidebar"
       style={{
         width: collapsed ? 'var(--sidebar-collapsed)' : 'var(--sidebar-width)',
         minHeight: '100vh',
-        background: 'var(--bg-secondary)',
-        borderRight: '1px solid var(--border)',
         display: 'flex',
         flexDirection: 'column',
         transition: 'width 0.25s cubic-bezier(0.4,0,0.2,1)',

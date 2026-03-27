@@ -1,16 +1,8 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'); */
 
 :root {
-  --bg-primary: #0D1117;
-  --bg-secondary: #161B22;
-  --bg-card: #1C2333;
-  --bg-hover: #21262D;
-  --border: #30363D;
-  --border-subtle: #21262D;
-  --text-primary: #E6EDF3;
-  --text-secondary: #8B949E;
-  --text-muted: #484F58;
+  /* Common variables */
   --accent: #6366f1;
   --accent-hover: #818CF8;
   --accent-light: rgba(99, 102, 241, 0.15);
@@ -25,12 +17,44 @@
   --sidebar-width: 260px;
   --sidebar-collapsed: 72px;
   --header-height: 64px;
+  --transition-speed: 0.3s;
+}
+
+:root.dark {
+  --bg-primary: #0D1117;
+  --bg-secondary: #161B22;
+  --bg-card: #1C2333;
+  --bg-hover: #21262D;
+  --border: rgba(48, 54, 61, 0.7);
+  --border-subtle: #21262D;
+  --text-primary: #E6EDF3;
+  --text-secondary: #8B949E;
+  --text-muted: #484F58;
+  --glass-bg: rgba(28, 35, 51, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+:root.light {
+  --bg-primary: #F0F2F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-hover: #F6F8FA;
+  --border: rgba(208, 215, 222, 0.8);
+  --border-subtle: #EBEEF2;
+  --text-primary: #1F2328;
+  --text-secondary: #656D76;
+  --text-muted: #8B949E;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --card-shadow: 0 8px 24px rgba(149, 157, 165, 0.1);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
 }
 
 html, body {
@@ -41,6 +65,22 @@ html, body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism / Shadows */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+}
+
+.glass-sidebar {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border);
 }
 
 /* Custom scrollbar */

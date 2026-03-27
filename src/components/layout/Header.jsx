@@ -1,6 +1,9 @@
-import { Bell, Search, ChevronDown } from 'lucide-react';
+import { Bell, Search, ChevronDown, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 export default function Header({ pageTitle }) {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <header style={{
       height: 'var(--header-height)',
@@ -13,7 +16,8 @@ export default function Header({ pageTitle }) {
       position: 'sticky',
       top: 0,
       zIndex: 10,
-      backdropFilter: 'blur(8px)',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
     }}>
       {/* Search */}
       <div style={{
@@ -33,6 +37,20 @@ export default function Header({ pageTitle }) {
       </div>
 
       <div style={{ flex: 1 }} />
+
+      {/* Theme Toggle */}
+      <button 
+        onClick={toggleTheme}
+        style={{
+          width: 36, height: 36, borderRadius: 8,
+          background: 'var(--bg-hover)', border: '1px solid var(--border)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          cursor: 'pointer', color: 'var(--text-secondary)',
+          transition: 'all 0.2s',
+        }}
+      >
+        {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+      </button>
 
       {/* Notifications */}
       <button style={{

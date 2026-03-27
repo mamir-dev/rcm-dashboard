@@ -45,7 +45,7 @@ export default function Settings() {
       </div>
 
       {/* User Management */}
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card glass-card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{
           padding: '14px 20px', borderBottom: '1px solid var(--border)',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',

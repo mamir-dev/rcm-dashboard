@@ -37,7 +37,7 @@ export default function Claims() {
           { label: 'Total Paid', value: `$${(totalPaid/1000).toFixed(1)}K`, color: 'var(--success)' },
           { label: 'Outstanding Balance', value: `$${(totalBalance/1000).toFixed(1)}K`, color: 'var(--warning)' },
         ].map((s, i) => (
-          <div key={i} className="card" style={{ padding: 16, textAlign: 'center' }}>
+          <div key={i} className="card glass-card" style={{ padding: 16, textAlign: 'center' }}>
             <div style={{ fontSize: 22, fontWeight: 700, color: s.color }}>{s.value}</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>{s.label}</div>
           </div>
@@ -69,7 +69,7 @@ export default function Claims() {
         </div>
       </div>
 
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card glass-card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ overflowX: 'auto' }}>
           <table className="data-table">
             <thead>

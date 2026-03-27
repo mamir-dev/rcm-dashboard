@@ -60,7 +60,7 @@ export default function Dashboard() {
       {/* Charts Row 1 */}
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 16, marginBottom: 16 }}>
         {/* Revenue Chart */}
-        <div className="card fade-in-up" style={{ animationDelay: '0.3s', opacity: 0 }}>
+        <div className="card glass-card fade-in-up" style={{ animationDelay: '0.3s', opacity: 0 }}>
           <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
               <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: 0 }}>Revenue vs Collections</h2>
@@ -101,7 +101,7 @@ export default function Dashboard() {
         </div>
 
         {/* Claims Status Pie */}
-        <div className="card fade-in-up" style={{ animationDelay: '0.35s', opacity: 0 }}>
+        <div className="card glass-card fade-in-up" style={{ animationDelay: '0.35s', opacity: 0 }}>
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>Claims Status</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 16 }}>Current period breakdown</p>
           <ResponsiveContainer width="100%" height={130}>
@@ -132,7 +132,7 @@ export default function Dashboard() {
       {/* Charts Row 2 */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
         {/* AR Aging */}
-        <div className="card fade-in-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
+        <div className="card glass-card fade-in-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>AR Aging</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 16 }}>Outstanding balances by age</p>
           <ResponsiveContainer width="100%" height={160}>
@@ -154,7 +154,7 @@ export default function Dashboard() {
         </div>
 
         {/* Top Denial Reasons */}
-        <div className="card fade-in-up" style={{ animationDelay: '0.45s', opacity: 0 }}>
+        <div className="card glass-card fade-in-up" style={{ animationDelay: '0.45s', opacity: 0 }}>
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 4px' }}>Top Denial Reasons</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 12 }}>By volume this month</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -181,7 +181,7 @@ export default function Dashboard() {
       </div>
 
       {/* Recent Claims */}
-      <div className="card fade-in-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
+      <div className="card glass-card fade-in-up" style={{ animationDelay: '0.5s', opacity: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
           <div>
             <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: 0 }}>Recent Claims</h2>
@@ -216,7 +216,7 @@ export default function Dashboard() {
       </div>
 
       {/* Provider Stats */}
-      <div className="card fade-in-up" style={{ animationDelay: '0.55s', opacity: 0, marginTop: 16 }}>
+      <div className="card glass-card fade-in-up" style={{ animationDelay: '0.55s', opacity: 0, marginTop: 16 }}>
         <div style={{ marginBottom: 16 }}>
           <h2 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', margin: 0 }}>Provider Performance</h2>
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>MTD summary by provider</p>

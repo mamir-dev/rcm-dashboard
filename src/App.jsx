@@ -12,9 +12,12 @@ import Denials from './pages/Denials';
 import Reports from './pages/Reports';
 import Settings from './pages/Settings';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Dashboard />} />
@@ -31,5 +34,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }

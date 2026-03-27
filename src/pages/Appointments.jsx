@@ -37,7 +37,7 @@ export default function Appointments() {
       {/* Status summary */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, marginBottom: 20 }}>
         {Object.entries(statusCounts).map(([status, count]) => (
-          <div key={status} className="card" style={{ padding: 16, borderLeft: `3px solid ${statusColors[status] || 'var(--border)'}` }}>
+          <div key={status} className="card glass-card" style={{ padding: 16, borderLeft: `3px solid ${statusColors[status] || 'var(--border)'}` }}>
             <div style={{ fontSize: 22, fontWeight: 700, color: statusColors[status] || 'var(--text-primary)' }}>{count}</div>
             <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>{status}</div>
           </div>
@@ -62,7 +62,7 @@ export default function Appointments() {
       </div>
 
       {/* Appointments Table */}
-      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="card glass-card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ overflowX: 'auto' }}>
           <table className="data-table">
             <thead>
